@@ -1,0 +1,1077 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+button,
+textarea,
+input {
+  font-family: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  width: 100%;
+  padding: 22px 7%;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 30px;
+  color: #0f766e;
+}
+
+.header p {
+  margin: 5px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.badge {
+  padding: 9px 15px;
+  border-radius: 20px;
+  background: #ecfdf5;
+  color: #0f766e;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.container {
+  width: min(1000px, 92%);
+  margin: 35px auto;
+  flex: 1;
+}
+
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.progress span {
+  padding: 8px 15px;
+  border-radius: 20px;
+  background: #e2e8f0;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.progress span.active {
+  background: #0f766e;
+  color: white;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+  background: white;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.07);
+  border: 1px solid #e2e8f0;
+}
+
+.card > h2 {
+  margin: 10px 0 10px;
+  text-align: center;
+  color: #0f3d5e;
+  font-size: 28px;
+}
+
+.description {
+  color: #64748b;
+  text-align: center;
+  line-height: 1.6;
+  max-width: 760px;
+  margin: 0 auto 25px;
+}
+
+.icon {
+  width: 55px;
+  height: 55px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: #ecfdf5;
+  font-size: 27px;
+}
+
+
+/* =========================
+   GEMINI STYLE UPLOAD
+========================= */
+
+.upload-page {
+  text-align: center;
+}
+
+.medical-upload-area {
+  max-width: 650px;
+  margin: 35px auto 25px;
+  padding: 35px 30px;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  background: #f8fafc;
+}
+
+.upload-plus-circle {
+  width: 66px;
+  height: 66px;
+
+  margin: 0 auto 18px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #0f766e;
+  color: white;
+
+  font-size: 38px;
+  font-weight: 300;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.upload-plus-circle:hover {
+  transform: scale(1.05);
+  background: #115e59;
+}
+
+.medical-upload-area h3 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  color: #1e293b;
+}
+
+.medical-upload-area > p {
+  margin: 0 0 25px;
+  color: #64748b;
+}
+
+
+/* =========================
+   UPLOAD OPTIONS
+========================= */
+
+.upload-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.upload-option {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 15px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+
+  background: white;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.upload-option:hover {
+  border-color: #0f766e;
+  background: #f0fdfa;
+  transform: translateY(-1px);
+}
+
+.upload-option > span {
+  font-size: 25px;
+}
+
+.upload-option strong {
+  display: block;
+  color: #1e293b;
+  font-size: 15px;
+}
+
+.upload-option small {
+  display: block;
+  margin-top: 3px;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.upload-option input {
+  display: none;
+}
+
+
+/* =========================
+   PRIVACY NOTE
+========================= */
+
+.upload-note {
+  max-width: 650px;
+  margin: 20px auto 0;
+
+  padding: 15px 18px;
+
+  display: flex;
+  gap: 12px;
+
+  text-align: left;
+
+  border-radius: 14px;
+
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.upload-note > span {
+  font-size: 20px;
+}
+
+.upload-note strong {
+  color: #334155;
+}
+
+.upload-note p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   UPLOADED FILE
+========================= */
+
+.uploaded-file {
+  margin: 20px 0;
+  padding: 16px 18px;
+
+  border-radius: 14px;
+
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.uploaded-file strong {
+  color: #334155;
+}
+
+.uploaded-file p {
+  margin: 7px 0;
+  color: #1e293b;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.uploaded-file span {
+  display: inline-block;
+
+  padding: 5px 10px;
+
+  border-radius: 12px;
+
+  background: #ecfdf5;
+  color: #0f766e;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   INSTRUCTION BOX
+========================= */
+
+.instruction-box {
+  margin: 20px 0;
+  padding: 20px;
+
+  border-left: 4px solid #0f766e;
+
+  background: #f8fafc;
+
+  border-radius: 12px;
+}
+
+.instruction-box strong {
+  color: #334155;
+}
+
+.instruction-box p {
+  margin: 10px 0 0;
+  line-height: 1.6;
+  color: #475569;
+}
+
+
+/* =========================
+   RESULT BOX
+========================= */
+
+.result-box,
+.question-box {
+  margin: 20px 0;
+  padding: 22px;
+
+  border-radius: 16px;
+
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.result-box h3,
+.question-box h3 {
+  margin-top: 0;
+  color: #0f3d5e;
+}
+
+
+/* =========================
+   TEXTAREA
+========================= */
+
+textarea {
+  width: 100%;
+  min-height: 150px;
+
+  padding: 16px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 14px;
+
+  resize: vertical;
+
+  outline: none;
+
+  font-size: 15px;
+  line-height: 1.6;
+
+  color: #1e293b;
+  background: white;
+
+  margin: 10px 0 20px;
+}
+
+textarea:focus {
+  border-color: #0f766e;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.1);
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.card > button {
+  display: block;
+
+  margin: 20px auto 0;
+
+  padding: 13px 22px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #0f766e;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.card > button:hover {
+  background: #115e59;
+  transform: translateY(-1px);
+}
+
+.card > button:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title {
+  margin-top: 30px;
+  color: #0f3d5e;
+}
+
+
+/* =========================
+   GAP LIST
+========================= */
+
+.gap-list {
+  padding-left: 22px;
+}
+
+.gap-list li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: #475569;
+}
+
+
+/* =========================
+   QUESTION LIST
+========================= */
+
+.question-list {
+  padding-left: 24px;
+}
+
+.question-list li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: #475569;
+}
+
+
+/* =========================
+   ANALYSIS INFO
+========================= */
+
+.analysis-info {
+  margin-top: 25px;
+  padding: 20px;
+
+  border-radius: 15px;
+
+  background: #f0fdfa;
+  border: 1px solid #ccfbf1;
+}
+
+.analysis-info h3 {
+  margin-top: 0;
+  color: #0f766e;
+}
+
+.analysis-info p {
+  color: #475569;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   INFO NOTE
+========================= */
+
+.info-note {
+  padding: 14px 16px;
+
+  border-radius: 12px;
+
+  background: #f8fafc;
+
+  color: #475569;
+
+  line-height: 1.5;
+}
+
+.info-note p {
+  margin-bottom: 0;
+}
+
+
+/* =========================
+   SUMMARY
+========================= */
+
+.summary-status {
+  margin: 20px 0;
+  padding: 18px;
+
+  border-radius: 15px;
+}
+
+.summary-status.gap {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+}
+
+.summary-status.clear {
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+}
+
+.summary-status strong {
+  color: #334155;
+}
+
+.summary-status p {
+  margin-bottom: 0;
+  color: #64748b;
+}
+
+.summary {
+  display: grid;
+  gap: 15px;
+}
+
+.summary-item {
+  padding: 20px;
+
+  border-radius: 15px;
+
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.summary-item h3 {
+  margin-top: 0;
+  color: #0f3d5e;
+}
+
+.summary-item p {
+  color: #475569;
+  line-height: 1.6;
+}
+
+.summary-item small {
+  color: #0f766e;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  padding: 20px;
+
+  text-align: center;
+
+  background: white;
+
+  border-top: 1px solid #e2e8f0;
+
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .header {
+    padding: 18px 5%;
+
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .badge {
+    align-self: flex-start;
+  }
+
+  .container {
+    width: 94%;
+    margin: 20px auto;
+  }
+
+  .card {
+    padding: 25px 18px;
+  }
+
+  .card > h2 {
+    font-size: 24px;
+  }
+
+  .medical-upload-area {
+    padding: 28px 18px;
+  }
+
+  .upload-options {
+    grid-template-columns: 1fr;
+  }
+
+  .progress {
+    gap: 7px;
+  }
+
+  .progress span {
+    font-size: 11px;
+    padding: 7px 10px;
+  }
+
+}
+
+/* =================================
+   MEDICAL INFORMATION INPUT
+================================= */
+
+.input-section,
+.upload-section {
+  max-width: 720px;
+  margin: 25px auto;
+  padding: 25px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+
+  background: #f8fafc;
+}
+
+
+/* SECTION HEADING */
+
+.section-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.section-heading > span {
+  font-size: 25px;
+}
+
+.section-heading h3 {
+  margin: 0 0 5px;
+  color: #1e293b;
+  font-size: 19px;
+}
+
+.section-heading p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* MEDICAL TEXT INPUT */
+
+.medical-input {
+  width: 100%;
+  min-height: 130px;
+
+  margin: 0;
+
+  padding: 15px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 14px;
+
+  background: white;
+
+  color: #1e293b;
+
+  font-size: 14px;
+  line-height: 1.6;
+
+  resize: vertical;
+
+  outline: none;
+}
+
+.medical-input:focus {
+  border-color: #0f766e;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.1);
+}
+
+
+/* PRIMARY ACTION */
+
+.primary-action {
+  width: 100%;
+
+  margin-top: 14px;
+
+  padding: 13px 18px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #0f766e;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.primary-action:hover {
+  background: #115e59;
+}
+
+.primary-action:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+}
+
+
+/* =================================
+   OR DIVIDER
+================================= */
+
+.upload-divider {
+  max-width: 720px;
+  margin: 25px auto;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.upload-divider::before,
+.upload-divider::after {
+  content: "";
+
+  flex: 1;
+
+  height: 1px;
+
+  background: #e2e8f0;
+}
+
+.upload-divider span {
+  padding: 5px 10px;
+
+  border-radius: 20px;
+
+  background: #f1f5f9;
+}
+
+
+/* =================================
+   UPLOAD BUTTON
+================================= */
+
+.upload-main-button {
+  width: 100%;
+
+  min-height: 75px;
+
+  border: 1.5px dashed #94a3b8;
+  border-radius: 16px;
+
+  background: white;
+
+  color: #334155;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.upload-main-button:hover {
+  border-color: #0f766e;
+  background: #f0fdfa;
+  color: #0f766e;
+}
+
+
+/* PLUS */
+
+.plus-symbol {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #0f766e;
+  color: white;
+
+  font-size: 23px;
+  font-weight: 300;
+}
+
+
+/* =================================
+   UPLOAD OPTIONS
+================================= */
+
+.upload-options {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+
+  margin-top: 15px;
+}
+
+.upload-option {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 15px;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 14px;
+
+  background: white;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.upload-option:hover {
+  border-color: #0f766e;
+
+  background: #f0fdfa;
+
+  transform: translateY(-1px);
+}
+
+.upload-option-icon {
+  font-size: 25px;
+}
+
+.upload-option strong {
+  display: block;
+
+  color: #1e293b;
+
+  font-size: 14px;
+}
+
+.upload-option small {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #64748b;
+
+  font-size: 11px;
+
+  line-height: 1.4;
+}
+
+.upload-option input {
+  display: none;
+}
+
+
+/* =================================
+   PRIVACY NOTE
+================================= */
+
+.upload-note {
+  max-width: 720px;
+
+  margin: 20px auto 0;
+
+  padding: 15px 18px;
+
+  display: flex;
+
+  gap: 12px;
+
+  text-align: left;
+
+  border-radius: 14px;
+
+  background: #f1f5f9;
+
+  color: #475569;
+}
+
+.upload-note > span {
+  font-size: 20px;
+}
+
+.upload-note strong {
+  color: #334155;
+}
+
+.upload-note p {
+  margin: 4px 0 0;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 700px) {
+
+  .input-section,
+  .upload-section {
+    padding: 20px;
+  }
+
+  .upload-options {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading h3 {
+    font-size: 17px;
+  }
+
+}
+
+/* =========================================
+   CARE RELAY - BEAUTIFUL HEALTHCARE BACKGROUND
+========================================= */
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(20, 184, 166, 0.10),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(59, 130, 246, 0.10),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #eef7f7 0%,
+      #f4f8fc 45%,
+      #eef4fb 100%
+    );
+
+  background-attachment: fixed;
+
+  color: #1e293b;
+}
+
+
+/* Main application area */
+
+.app {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 15% 15%,
+      rgba(20, 184, 166, 0.07),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(37, 99, 235, 0.06),
+      transparent 30%
+    );
+}
+
+
+/* Main content area */
+
+main {
+  background: transparent;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.94);
+
+  border: 1px solid rgba(148, 163, 184, 0.18);
+
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.08),
+    0 4px 12px rgba(15, 23, 42, 0.04);
+
+  backdrop-filter: blur(10px);
+}
+
+.input-section,
+.upload-section {
+  background: rgba(248, 250, 252, 0.85);
+
+  border: 1px solid rgba(148, 163, 184, 0.20);
+
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.04);
+}
